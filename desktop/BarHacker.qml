@@ -16,6 +16,9 @@ import Quickshell.Io
 PanelWindow {
     id: hk
     required property var root
+    property var targetScreen: null
+
+    screen: targetScreen !== null ? targetScreen : undefined
 
     color: "transparent"
     anchors {

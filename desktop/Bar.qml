@@ -6,6 +6,9 @@ import Quickshell.Wayland
 PanelWindow {
     id: bar
     required property var root
+    property var targetScreen: null
+
+    screen: targetScreen !== null ? targetScreen : undefined
 
     color: "transparent"
     // Anchors track barEdge — three sides anchored, the side opposite
