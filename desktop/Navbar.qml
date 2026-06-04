@@ -1720,8 +1720,10 @@ Item {
     // ---------- Surfaces ----------
     // Both bar faces are instantiated; only the one matching barVariant maps
     // to the edge (the other is an unmapped, zero-exclusive-zone window).
-    Bar              { root: root; visible: root.barVariant === "zen" }
-    BarHacker        { root: root; visible: root.barVariant === "hackerman" }
+    Bar       { root: root; visible: root.barVariant === "zen";       screen: Quickshell.screens[0] }
+    Bar       { root: root; visible: root.barVariant === "zen";       screen: Quickshell.screens[1] }
+    BarHacker { root: root; visible: root.barVariant === "hackerman"; screen: Quickshell.screens[0] }
+    BarHacker { root: root; visible: root.barVariant === "hackerman"; screen: Quickshell.screens[1] }
     TooltipOverlay   { root: root }
     CalendarPopup    { root: root }
     ScreenshotsPopup { root: root }
